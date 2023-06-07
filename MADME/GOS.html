@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>📝 Task Manager</h1>
+  </header>
+
+  <main>
+    <section id="task-form">
+      <h2>➕ Create a New Task</h2>
+      <!-- Task creation form -->
+      <form>
+        <!-- Task input fields -->
+        <label for="task-title">✏️ Title:</label>
+        <input type="text" id="task-title" name="task-title" required>
+
+        <label for="task-description">📄 Description:</label>
+        <textarea id="task-description" name="task-description"></textarea>
+
+        <label for="task-due-date">⏰ Due Date:</label>
+        <input type="date" id="task-due-date" name="task-due-date">
+
+        <label for="task-priority">🚀 Priority:</label>
+        <select id="task-priority" name="task-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <!-- Button to submit the task form -->
+        <button type="submit">➕ Create Task</button>
+      </form>
+    </section>
+
+    <section id="task-list">
+      <h2>📋 Task List</h2>
+      <!-- Task list display -->
+      <ul>
+        <!-- Individual task items -->
+        <li>
+          <div class="task-item">
+            <h3>📌 Task Title</h3>
+            <p>📝 Task Description</p>
+            <p>⏰ Due Date: <span class="due-date">Task Due Date</span></p>
+            <p>🚀 Priority: <span class="priority">Task Priority</span></p>
+          </div>
+          <!-- Task action buttons -->
+          <div class="task-actions">
+            <button class="complete-button">✅ Complete</button>
+            <button class="delete-button">🗑️ Delete</button>
+          </div>
+        </li>
+        <!-- More task items -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
